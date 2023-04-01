@@ -4,7 +4,7 @@
 /fileadmin/_temp_/
 /fileadmin/_processed_/
 /uploads/
-.next/
+
 # Ignore cache
 /typo3conf/temp_CACHED*
 /typo3conf/temp_fieldInfo.php
@@ -23,8 +23,6 @@
 # Ignore temp directory.
 /typo3temp/
 *.pack
-*.json
-*.json
 *.pack
 *.pack
 *.pack

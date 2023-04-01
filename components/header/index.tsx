@@ -5,7 +5,7 @@ import Logo from '../../assets/icons/logo';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { RootState } from 'store';
-
+import { Navbar } from './Navbar';
 type HeaderType = {
   isErrorPage?: Boolean;
 }
@@ -60,10 +60,9 @@ const Header = ({ isErrorPage }: HeaderType) => {
         </Link>
         <nav ref={navRef} className={`site-nav ${menuOpen ? 'site-nav--open' : ''}`}>
           <Link href="/products">
-            <a>Products</a>
+            <a><Navbar /></a>
           </Link>
-          <a href="#">About Us #</a>
-          <a href="#">Contact Us #</a>
+          
           <button className="site-nav__btn"><p>Account</p></button>
         </nav>
 

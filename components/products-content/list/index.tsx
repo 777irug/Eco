@@ -33,10 +33,12 @@ const ProductsContent = () => {
     <>
    {!pro && 
         <ProductsLoading />
+    
       } 
 
        {pro &&
-        <section className="products-list">
+        <section className="products-list">\
+        <H1>GUGGUI</H1>
           {pro.map((data,idx)  => {
             console.log(data._id)
             return(

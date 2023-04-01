@@ -20,7 +20,7 @@ export const SubNav = ({ props }: ISubNavComponent) => {
                             {props.icon}
                             <span>{props.name}</span>
                         </div>
-                        <ChevronRightIcon className={`w-4 ${menuOpen ? "rotate-90" : ""}`} />
+                        <ChevronRightIcon className={`w-1 ${menuOpen ? "rotate-90" : "w-3"}`} />
                     </div>
                     {menuOpen &&
                         <ul>
@@ -36,7 +36,7 @@ export const SubNav = ({ props }: ISubNavComponent) => {
                 </li>
                 :
                 <div>
-                    <li className='flex justify-between items-center hover:bg-red-400 cursor-pointer'>
+                    <li className='flex justify-between items-center hover:bg-red-400 cursor-pointer '>
                         <div className='flex items-center gap-2'>
                             {props.icon}
                             <span>{props.name}</span>

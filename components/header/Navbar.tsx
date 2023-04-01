@@ -1,62 +1,58 @@
-import { CogIcon, PlusCircleIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
+import { PlusCircleIcon } from '@heroicons/react/24/solid';
 import { useEffect, useState } from 'react';
-import { IContentMenu, IMenu } from '../header/IMenu';
+import { IContentMenu } from '../header/IMenu';
 import { SubNav } from '../header/SubNav';
 
 const items = [
   {
     name: "Menu1",
-    icon: <CogIcon className='w-6' />,
     path: "/menu",
     children: [
       {
         name: "menudropdown1",
-        icon: <PlusCircleIcon className='w-6' />,
+        icon: <PlusCircleIcon   />,
         path: "/menu"
       },
       {
         name: "menudropdown1",
-        icon: <PlusCircleIcon className='w-6' />,
+        icon: <PlusCircleIcon   />,
         path: "/menu"
       },
       {
         name: "menudropdown3",
-        icon: <PlusCircleIcon className='w-6' />,
+        icon: <PlusCircleIcon   />,
         path: "/menu"
       }
     ]
   },
   {
     name: "Menu2",
-    icon: <CogIcon className='w-6' />,
     path: "/menu",
     children: []
   },
   {
     name: "Menu3",
-    icon: <CogIcon className='w-6' />,
     path: "/menu",
     children: [
       {
         name: "menudropdown1",
-        icon: <PlusCircleIcon className='w-6' />,
+        icon: <PlusCircleIcon/>,
         path: "/menu"
       },
       {
         name: "menudropdown1",
-        icon: <PlusCircleIcon className='w-6' />,
+        icon: <PlusCircleIcon   />,
         path: "/menu"
       },
       {
         name: "menudropdown3",
-        icon: <PlusCircleIcon className='w-6' />,
+        icon: <PlusCircleIcon   />,
         path: "/menu"
       }
     ]
   },
   {
     name: "Menu4",
-    icon: <CogIcon className='w-6' />,
     path: "/menu",
     children: []
   }
@@ -76,7 +72,7 @@ export const Navbar = () => {
 
   return (
     <div className="">
-      <ul className='flex flex-col gap-4'>
+      <ul className='flex flex-col gap-4' style={{display:"inline-flex"}}>
         {contentMenu && contentMenu.length > 0 &&
           <>
             {contentMenu.map((menu: IContentMenu, index) => (

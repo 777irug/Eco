@@ -1,86 +1,54 @@
-import { PlusCircleIcon } from '@heroicons/react/24/solid';
-import { useEffect, useState } from 'react';
-import { IContentMenu } from '../header/IMenu';
-import { SubNav } from '../header/SubNav';
+import React from 'react';
+import {Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { useState } from 'react';
 
-const items = [
-  {
-    name: "Menu1",
-    path: "/menu",
-    children: [
-      {
-        name: "menudropdown1",
-        icon: <PlusCircleIcon   />,
-        path: "/menu"
-      },
-      {
-        name: "menudropdown1",
-        icon: <PlusCircleIcon   />,
-        path: "/menu"
-      },
-      {
-        name: "menudropdown3",
-        icon: <PlusCircleIcon   />,
-        path: "/menu"
-      }
-    ]
-  },
-  {
-    name: "Menu2",
-    path: "/menu",
-    children: []
-  },
-  {
-    name: "Menu3",
-    path: "/menu",
-    children: [
-      {
-        name: "menudropdown1",
-        icon: <PlusCircleIcon/>,
-        path: "/menu"
-      },
-      {
-        name: "menudropdown1",
-        icon: <PlusCircleIcon   />,
-        path: "/menu"
-      },
-      {
-        name: "menudropdown3",
-        icon: <PlusCircleIcon   />,
-        path: "/menu"
-      }
-    ]
-  },
-  {
-    name: "Menu4",
-    path: "/menu",
-    children: []
-  }
-]
 
-export const Navbar = () => {
+export const MyNavbar=()=> {
 
-  const [contentMenu, setContentMenu] = useState<IContentMenu[] | null>([]);
+  const [show, setShow] = useState(false);
+const showDropdown = ()=>{
+    setShow(!show);
+}
+const hideDropdown = () => {
+    setShow(false);
+}
 
-  useEffect(() => {
-    getContentMenu();
-  }, []);
 
-  const getContentMenu = () => {
-    setContentMenu(items);
-  };
+    return (
+            <Navbar bg="transparent" variant="dark" expand="lg">
+            
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="ml-auto">
+                <Nav.Link href="#home">Home</Nav.Link>
+                <Nav.Link href="#link">Link</Nav.Link>
+                <NavDropdown title="Dropdown" 
+   id="collasible-nav-dropdown" 
+   show={show}
+   onMouseEnter={showDropdown} 
+   onMouseLeave={hideDropdown}
+   >
+                    <NavDropdown.Item href="#action/3.1"style={{color:" black"}}>Action</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.2"style={{color:" black"}}>Another action</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.3"style={{color:" black"}}>Something</NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item href="#action/3.4" style={{color:" black"}}>Separated link</NavDropdown.Item>
+                </NavDropdown>
+                <NavDropdown title="Dropdown1" 
+   id="collasible-nav-dropdown1" 
+   show={show}
+   onMouseEnter={showDropdown} 
+   onMouseLeave={hideDropdown}
+   >
+                    <NavDropdown.Item href="#action/3.1"style={{color:" black"}}>Action</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.2"style={{color:" black"}}>Another action</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.3"style={{color:" black"}}>Something</NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item href="#action/3.4" style={{color:" black"}}>Separated link</NavDropdown.Item>
+                </NavDropdown>
+                </Nav>
 
-  return (
-    <div className="">
-      <ul className='flex flex-col gap-4' style={{display:"inline-flex"}}>
-        {contentMenu && contentMenu.length > 0 &&
-          <>
-            {contentMenu.map((menu: IContentMenu, index) => (
-              <SubNav props={menu} />
-            ))}
-          </>
-        }
-      </ul>
-    </div>
-  );
-};
+            </Navbar.Collapse>
+            </Navbar>
+    )
+}

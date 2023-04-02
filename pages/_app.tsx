@@ -2,6 +2,7 @@ import './../styles/globals.scss'
 import React, { Fragment } from 'react';
 import Router from 'next/router';
 import {wrapper} from '../store';
+import 'bootstrap/dist/css/bootstrap.css';
 
 // types
 import type { AppProps } from 'next/app';

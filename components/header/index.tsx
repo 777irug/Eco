@@ -3,9 +3,10 @@ import { useSelector } from 'react-redux';
 import useOnClickOutside from 'use-onclickoutside';
 import Logo from '../../assets/icons/logo';
 import Link from 'next/link';
+import * as React from 'react';
 import { useRouter } from 'next/router';
 import { RootState } from 'store';
-import { Navbar } from './Navbar';
+import {MyNavbar} from './navbar';
 type HeaderType = {
   isErrorPage?: Boolean;
 }
@@ -59,11 +60,9 @@ const Header = ({ isErrorPage }: HeaderType) => {
           <a><h1 className="site-logo"><Logo />ECO</h1></a>
         </Link>
         <nav ref={navRef} className={`site-nav ${menuOpen ? 'site-nav--open' : ''}`}>
-          <Link href="/products">
-            <a><Navbar /></a>
-          </Link>
-          <a>#About</a>
-          <a>#Contact</a>
+          
+            <MyNavbar/>
+
           <button className="site-nav__btn"><p>Account</p></button>
         </nav>
 

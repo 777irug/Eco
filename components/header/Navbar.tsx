@@ -36,15 +36,15 @@ const hideDropdown = () => {
                 </NavDropdown>
                 <NavDropdown title="Today Deals" 
    id="collasible-nav-dropdown1" 
-   show={show}
+//    show={show}
    onMouseEnter={showDropdown} 
    onMouseLeave={hideDropdown}
    >
-                    <NavDropdown.Item href="#action/3.1"style={{color:" black"}}>Dummy</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2"style={{color:" black"}}>Dummy</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3"style={{color:" black"}}>Dummy</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.1"style={{color:" black"}}>Action</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.2"style={{color:" black"}}>Another action</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.3"style={{color:" black"}}>Something</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/3.4" style={{color:" black"}}>Dummy</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.4" style={{color:" black"}}>Separated link</NavDropdown.Item>
                 </NavDropdown>
                 </Nav>
 

@@ -1,4 +1,4 @@
-export const MyNavbar=()=>{
+const MyNavbar=()=>{
     /* START: RUBY DEMO HEADER */
  return(
   <div className="ruby-menu-demo-header">
@@ -1035,3 +1035,5 @@ export const MyNavbar=()=>{
   
   )
 }
+
+export default MyNavbar

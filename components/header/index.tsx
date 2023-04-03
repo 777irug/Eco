@@ -6,7 +6,7 @@ import Link from 'next/link';
 import * as React from 'react';
 import { useRouter } from 'next/router';
 import { RootState } from 'store';
-import {MyNavbar} from './navbar';
+import MyNavbar from './navbar';
 type HeaderType = {
   isErrorPage?: Boolean;
 }

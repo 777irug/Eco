@@ -60,9 +60,9 @@ const Header = ({ isErrorPage }: HeaderType) => {
           <a><h1 className="site-logo"><Logo />ECO</h1></a>
         </Link>
         <nav ref={navRef} className={`site-nav ${menuOpen ? 'site-nav--open' : ''}`}>
-          <Link href="/products">
+          
             <a><MyNavbar/></a>
-          </Link>
+        
           
           <button className="site-nav__btn"><p>Account</p></button>
         </nav>

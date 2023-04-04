@@ -1,22 +1,11 @@
-import Link from 'next/link';
-import { useDispatch } from 'react-redux';
-import { toggleFavProduct } from 'store/reducers/user';
 
 
 // const ProductItem = ({}} : ProductTypeList) => {
   function ProductItem({}){
-  const dispatch = useDispatch();
   // const { favProducts } = useSelector((state: RootState) => state.user);
 
   // const isFavourite = some(favProducts, productId => productId === id);
 
-  const toggleFav = () => {
-    dispatch(toggleFavProduct(
-      { 
-        id,
-      }
-    ))
-  }
 
   return (
     <div className="product-item">

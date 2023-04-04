@@ -21,16 +21,16 @@ import { toggleFavProduct } from 'store/reducers/user';
   return (
     <div className="product-item">
       <div className="product__image">
-        <button type="button" onClick={toggleFav} className={`btn-heart ${isFavourite ? 'btn-heart--active' : ''}`}><i className="icon-heart"></i></button>
+        {/* <button type="button" onClick={toggleFav} className={`btn-heart ${isFavourite ? 'btn-heart--active' : ''}`}><i className="icon-heart"></i></button> */}
 
-        <Link href={`/product/${id}`}>
-          <a>
+        {/* <Link href={`/product/${id}`}>
+          <a> */}
             {/* <img src={images ? images[0] : ''} alt="product" /> */}
             {/* {discount &&  */}
               {/* <span className="product__discount">{discount}%</span> */}
             {/* } */}
-          </a>
-        </Link>
+          {/* </a>
+        </Link> */}
       </div>
       
       <div className="product__description">

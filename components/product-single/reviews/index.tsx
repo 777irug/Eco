@@ -7,12 +7,12 @@
 //   product: ProductType
 // }
 
-// const Reviews = ({ show, product }: ReviewsProductType) => {
+const Reviews = () => {
 //   const style = {
 //     display: show ? 'flex' : 'none',
 //   }
 
-//   return (
+  return (
 //     <></>
 //     // <section style={style} className="product-single__reviews">
 //     //   <Punctuation 
@@ -22,8 +22,8 @@
 //     //   />
 //     //   <ReviewsList reviews={product.reviews} />
 //     // </section>
-//   );
-// // };
+ <></> );
+};
   
-// export default Reviews;
+export default Reviews;
     

@@ -23,12 +23,12 @@
       </div>
       
       <div className="product__description">
-        <h3>{name}</h3>
+        {/* <h3>{name}</h3> */}
         {/* <div className={"product__price " + (discount ? 'product__price--discount' : '')} > */}
-          <h4>${ currentPrice }</h4>
+          {/* <h4>${ currentPrice }</h4> */}
 
           {/* {discount &&   */}
-            <span>${ price }</span>
+            {/* <span>${ price }</span> */}
           {/* } */}
         </div>
       </div>

@@ -1,11 +1,11 @@
 // import useSwr from 'swr';
-// import ProductItem from '../../product-item';
+import ProductItem from '../../product-item';
 import ProductsLoading from './loading';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import axios from 'axios';
-// import Link from 'next/link';
-// import { ProductTypeList } from 'types';
+import Link from 'next/link';
+import { ProductTypeList } from 'types';
 
 
 const ProductsContent = () => {
@@ -39,7 +39,7 @@ const ProductsContent = () => {
        {pro &&
         <section className="products-list">
         
-          {pro.map((data,idx)  => {
+          {pro.map((data)  => {
             console.log(data._id)
             return(
               <>
